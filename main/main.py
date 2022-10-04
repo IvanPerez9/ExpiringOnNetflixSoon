@@ -33,11 +33,12 @@ if __name__ == '__main__':
 
     # ------- Env variables ------------
     pipinstall("python-dotenv")
-    from dotenv import load_dotenv, dotenv_values
+    from dotenv import load_dotenv, dotenv_values, find_dotenv
 
-    load_dotenv(".env")
-    config = dotenv_values(".env")
-    print(config["EMAIL"])
+    # Get the path to the directory this file is in
+    BASEDIR = os.path.abspath(os.path.dirname("../venv/variables.env"))
+    # Connect the path with your '.env' file name
+    load_dotenv(os.path.join(BASEDIR, '../venv/variables.env'))
 
     # enter your Netflix email
     email = os.getenv('EMAIL')

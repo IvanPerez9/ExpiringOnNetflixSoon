@@ -1,7 +1,4 @@
-import os
-import subprocess
-import sys
-from telnetlib import EC
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 from selenium import webdriver
@@ -15,10 +12,13 @@ def get_my_list(driver, email, pw, user_profile):
     print("Going to Netflix...")
     driver.get("https://www.netflix.com")
 
-    # click login button
     print("Entering Login info")
     current_url = driver.current_url
-    login_button = driver.find_element(By.CLASS_NAME, "authLinks redButton")
+    # close cookies
+    cookies = driver.find_element(By.CLASS_NAME, "icon-close")
+    cookies.click()
+    # click login button
+    login_button = driver.find_element(By.CLASS_NAME, "authLinks")
     login_button.click()
     WebDriverWait(driver, 15).until(EC.url_changes(current_url))
 
@@ -53,7 +53,7 @@ def get_my_list(driver, email, pw, user_profile):
 
     # scroll down my list to load all titles
     logo = driver.find_element(By.CLASS_NAME, "logo")
-    for n in range(1, 10):
+    for n in range(1, 15):
         print("Getting list of movies...")
         logo.send_keys(Keys.END)
         sleep(1)
