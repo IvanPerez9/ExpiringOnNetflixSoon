@@ -3,7 +3,7 @@ import subprocess
 import sys
 
 from selenium import webdriver
-from seleniumScraping import get_my_list
+from SeleniumScraping import get_my_list
 from GetExpiringPerCountry import get_expiring_per_country
 
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     # headless not show selenium running
     options = Options()
-    #options.headless = True
+    options.headless = True
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     # ------- Env variables ------------
@@ -62,6 +62,11 @@ if __name__ == '__main__':
             my_expiring_movies[movie] = expiring_movies[movie]
 
     if len(my_expiring_movies) > 0:
+        print("------------------------------------------")
+        print("EXPIRING: ")
         print(my_expiring_movies)
+        print("------------------------------------------")
     else:
-        print("Nothing is about to expire.")
+        print("------------------------------------------")
+        print("Nothing from your list is about to expire.")
+        print("------------------------------------------")

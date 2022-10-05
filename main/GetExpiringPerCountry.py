@@ -1,16 +1,26 @@
 import requests
 
 
-def get_expiring_per_country(country, api_key):
-    url = "https://unogsng.p.rapidapi.com/expiring"
-    querystring = {"countrylist": country}
+def get_expiring_per_country(api_key, country='ES'):
+    """
+    Get expiring movies and show from Netflix unnoficial API
+    @param country: search expiring movies by country. ES default
+    @param api_key: free api key from rapidapi
+    @return: list of expiring movies and shows by country
+    """
+    url = "https://unogs-unogs-v1.p.rapidapi.com/aaapi.cgi"
+    querystring = {"q": "get:exp:" + country, "t": "ns", "st": "adv", "p": "1"}
     headers = {
-        'x-rapidapi-host': "unogsng.p.rapidapi.com",
-        'x-rapidapi-key': api_key
+        "X-RapidAPI-Key": api_key,
+        "X-RapidAPI-Host": "unogs-unogs-v1.p.rapidapi.com"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
 
     data = response.json()
-    movie_dicts = data["results"]
+    if 200 is not response.status_code:
+        print(data['message'])
+        exit(1)
+    movie_dicts = data["ITEMS"]
+    # Just title and expiring date
     expiring_movies = {movie["title"]: movie["unogsdate"] for movie in movie_dicts}
     return expiring_movies

@@ -8,6 +8,15 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 def get_my_list(driver, email, pw, user_profile):
+    """
+    Simulate with Selenium loging into my Netflix account.
+    Extract my list info
+    @param driver: chrome driver by default
+    @param email: email for log in
+    @param pw: password for log in
+    @param user_profile: select my user profile by name
+    @return: my list of movies and shows
+    """
     # go to netflix
     print("Going to Netflix...")
     driver.get("https://www.netflix.com")
