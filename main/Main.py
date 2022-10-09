@@ -6,6 +6,11 @@ from selenium import webdriver
 from SeleniumScraping import get_my_list
 from GetExpiringPerCountry import get_expiring_per_country
 
+email = None
+pw = None
+user_profile = None
+country = None
+api_key = None
 
 def pipinstall(package):
     '''
@@ -14,6 +19,49 @@ def pipinstall(package):
     @return:
     '''
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+def readDefaultAccountFromFileOrLoadNewAccount ():
+    '''
+    Select default account or enter a new one to extract 'My list' information
+    @return: email, password, user, country and api key to global variables
+    '''
+    # ------- Env variables ------------
+    pipinstall("python-dotenv")
+    from dotenv import load_dotenv
+
+    # Get the path to the directory this file is in
+    BASEDIR = os.path.abspath(os.path.dirname("variables.env"))
+    # Connect the path with your '.env' file name
+    load_dotenv(os.path.join(BASEDIR, 'variables.env'))
+
+    account = input("Choose default account store in .env (0) or enter a new one (1): ")
+    global email
+    global pw
+    global user_profile
+    global country
+    global api_key
+
+    # Your rapid api free key
+    api_key = os.getenv("API_KEY")
+
+    if account == '0':
+        # enter your Netflix email
+        email = os.getenv('EMAIL')
+        # enter your Netflix password
+        pw = os.getenv("PASSWORD")
+        # enter your profile name
+        user_profile = os.getenv("USER_PROFILE")
+        # Change your country code (see readme for list of countries)
+        country = os.getenv("COUNTRY")
+    elif account == '1':
+        email = input("Enter your Netflix email account: ")
+        pw = input("Enter your Netflix password account: ")
+        user_profile = input("Enter your user profile name: ")
+        country = input("Enter you country: (Ex: ES for Spain or US for USA) ")
+    else:
+        print("Please enter a valid option")
+        readDefaultAccountFromFileOrLoadNewAccount()
+
 
 
 if __name__ == '__main__':
@@ -31,26 +79,8 @@ if __name__ == '__main__':
     options.headless = True
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    # ------- Env variables ------------
-    pipinstall("python-dotenv")
-    from dotenv import load_dotenv, dotenv_values, find_dotenv
-
-    # Get the path to the directory this file is in
-    BASEDIR = os.path.abspath(os.path.dirname("../venv/variables.env"))
-    # Connect the path with your '.env' file name
-    load_dotenv(os.path.join(BASEDIR, '../venv/variables.env'))
-
-    # enter your Netflix email
-    email = os.getenv('EMAIL')
-    # enter your Netflix password
-    pw = os.getenv("PASSWORD")
-    # enter your profile name
-    user_profile = os.getenv("USER_PROFILE")
-    # enter your rapid api key (it's free)
-    api_key = os.getenv("API_KEY")
-    # Change your country code (see readme for list of countries)
-    country = os.getenv("COUNTRY")
-
+    # ---------- select account --------
+    readDefaultAccountFromFileOrLoadNewAccount()
     # ------- seleniumScraping ---------
     my_list_titles = get_my_list(driver=driver, email=email, pw=pw, user_profile=user_profile)
     # ------- API expiring movies ------
