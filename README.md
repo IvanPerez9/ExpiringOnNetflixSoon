@@ -9,17 +9,17 @@
 
 Movies and series from Netflix 'My List' that are going to be removed in the next month.
 
-# Requirements
+# 💻 Requirements
 
 - Python 3.7 or above
-  - Normally required python libraries are configured to install itselft if not run the following command
+  - Normally required python libraries are configured to install themselves if not, run the following command
     ```
     python -m pip install 'package'
     ```
 - Webdriver (Chrome webdriver by default)
 - UNOGSNG rapid API key
 
-# Installation
+# ⚙️ Installation
 
 - Clone repository
 - Create a .env file with the following required fields 
@@ -32,11 +32,11 @@ Movies and series from Netflix 'My List' that are going to be removed in the nex
 ![Variables.env](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/blob/main/img/variables.png)
 
 
-# How to use
+# 📖 How to use
 
 - Run main.py file 
-- When running it shows two options for users input, 0 and 1
+- When running, it shows two options for users input, 0 and 1
   - Case 0: Get the info from the .env file created before
-  - Case 1: Ask for your email, password, user profile and country
+  - Case 1: It ask for your Netflix email, password, user profile and country
 
-- When finish it will show a list of shows and films that are about to expired or if you are lucky it will display a message saying that you have nothing that is about to expire.
+- When completed, it will show a list of shows and films that are about to expire or if you are lucky it will display a message saying that you have nothing that is about to expire.
