@@ -39,4 +39,4 @@ Movies and series from Netflix 'My List' that are going to be removed in the nex
   - Case 0: Get the info from the .env file created before
   - Case 1: It ask for your Netflix email, password, user profile and country
 
-- When completed, it will show a list of shows and films that are about to expire or if you are lucky it will display a message saying that you have nothing that is about to expire.
+- When completed, it will show a list of shows and films that are about to expire or if you are lucky it will display a message informing that you have nothing that is about to expire.
