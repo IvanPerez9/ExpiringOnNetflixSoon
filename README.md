@@ -9,6 +9,7 @@
 
 Movies and series from Netflix 'My List' that are going to be removed in the next month.
 
+ ---
 # 💻 Requirements
 
 - Python 3.7 or above
