@@ -12,7 +12,7 @@ Movies and series from Netflix 'My List' that are going to be removed in the nex
 # Requirements
 
 - Python 3.7 or above
-  - Normally required python libraries are configured to install itselft if not run 
+  - Normally required python libraries are configured to install itselft if not run the following command
     ```
     python -m pip install 'package'
     ```
@@ -29,7 +29,7 @@ Movies and series from Netflix 'My List' that are going to be removed in the nex
   - API_KEY: Your rapid api free key
   - COUNTRY: Your country code (Ex. ES = Spain; US = United States of America)
 
-![Variables.env](https://raw.githubusercontent.com/IvanPerez9/pumpkin-theme-vscode/main/pumpkin-color-theme/themeImg.png)
+![Variables.env](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/blob/main/img/variables.png)
 
 
 # How to use
