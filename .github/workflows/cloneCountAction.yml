@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Pull
+        uses: ad-m/github-pull-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: gh login
         run: echo "${{ secrets.SECRET_TOKEN }}" | gh auth login --with-token
 
