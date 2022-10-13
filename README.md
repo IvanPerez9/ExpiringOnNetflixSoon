@@ -2,6 +2,7 @@
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=blue&label=Clone&query=count&url=https://gist.githubusercontent.com/IvanPerez9/9f3650387d49b22a3a80fcf27fbe1d8a/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 ![Manintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ![GitHub last commit (master)](https://img.shields.io/github/last-commit/IvanPerez9/ExpiringOnNetflixSoon)
+[![Custom Deployment](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml/badge.svg)](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml)
 
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
