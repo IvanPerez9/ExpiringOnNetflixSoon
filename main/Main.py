@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
     # headless not show selenium running
     options = Options()
-    options.headless = True
+    #options.headless = True
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     # ---------- select account --------
