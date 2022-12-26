@@ -1,4 +1,4 @@
-![visitor badge](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=IvanPerez9.ExpiringOnNetflixSoon&color=be54c6&style=flat&logo=Github)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FIvanPerez9%2FExpiringOnNetflixSoon&countColor=%23ff8a65&style=flat&labelStyle=none)
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=9cf&label=Clone&query=count&url=https://gist.githubusercontent.com/IvanPerez9/59a5b3a0369b18a33e49c05830481acf/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 ![Manintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ![GitHub last commit (master)](https://img.shields.io/github/last-commit/IvanPerez9/ExpiringOnNetflixSoon)
