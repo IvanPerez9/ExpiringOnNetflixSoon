@@ -5,6 +5,8 @@
 [![Custom Deployment](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml/badge.svg)](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml)
 
 
+
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
 
