@@ -2,7 +2,6 @@
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=9cf&label=Clone&query=count&url=https://gist.githubusercontent.com/IvanPerez9/59a5b3a0369b18a33e49c05830481acf/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
 [![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 ![GitHub last commit (master)](https://img.shields.io/github/last-commit/IvanPerez9/ExpiringOnNetflixSoon)
-[![Custom Deployment](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml/badge.svg)](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml)
 
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
