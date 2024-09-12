@@ -1,6 +1,6 @@
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FIvanPerez9%2FExpiringOnNetflixSoon&countColor=%23ff8a65&style=flat&labelStyle=none)
 [![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=9cf&label=Clone&query=count&url=https://gist.githubusercontent.com/IvanPerez9/59a5b3a0369b18a33e49c05830481acf/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
-![Manintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 ![GitHub last commit (master)](https://img.shields.io/github/last-commit/IvanPerez9/ExpiringOnNetflixSoon)
 [![Custom Deployment](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml/badge.svg)](https://github.com/IvanPerez9/ExpiringOnNetflixSoon/actions/workflows/cloneCountAction.yml)
 
